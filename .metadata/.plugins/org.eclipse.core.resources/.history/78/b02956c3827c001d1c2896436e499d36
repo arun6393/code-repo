@@ -1,0 +1,18 @@
+package learning;
+
+public class Executor {
+
+	public static void main(String args[]) {
+		FInterface fInterface=()-> System.out.println("hello");
+		
+		
+		fInterface.accept();
+		
+		
+		int x=Integer.MAX_VALUE+1;
+		
+		System.out.println(x);
+		
+	}
+	
+}

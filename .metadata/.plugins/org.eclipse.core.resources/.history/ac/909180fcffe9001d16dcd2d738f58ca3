@@ -1,0 +1,9 @@
+package structural;
+
+public abstract class PizzaDecorator implements Pizza {
+
+	
+	
+	
+	
+}

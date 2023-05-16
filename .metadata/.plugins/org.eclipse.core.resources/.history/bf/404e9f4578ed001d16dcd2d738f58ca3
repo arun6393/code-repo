@@ -1,0 +1,19 @@
+package t5;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class ParentTest{
+	public static void main(String args[]) {
+		
+	}
+}
+
+
+
+class Parent {
+    private void doSomething() throws FileNotFoundException {}
+}
+class Child extends Parent {
+    private void doSomething() throws IOException {}
+}

@@ -1,0 +1,22 @@
+package main;
+
+public class ExecutorClass {
+	
+	public static void main(String args[]) {
+		
+            String x = new String("ab");
+            x=change(x);
+            System.out.println(x);
+        }
+        public static String change(String x) {
+            x = "cd";
+            return x;
+        }
+        
+        public void fun(){
+
+        	static int a = 10;
+        	System.out.println(a);
+        	}
+
+}

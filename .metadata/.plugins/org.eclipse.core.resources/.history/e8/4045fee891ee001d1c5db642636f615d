@@ -1,0 +1,78 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import static java.util.stream.Collectors.*;
+import static java.util.Map.Entry.*;
+
+public class LambdaQuestions {
+
+	
+	
+	public static void main(String args[]) {
+		
+		
+		List<Integer> data =Arrays.asList(10,9,8,null,4,null,null,3);
+		
+		
+		List<Integer> data1=data.stream().sorted(Comparator.nullsLast(Comparator.naturalOrder())).collect(Collectors.toList());
+		
+		
+		System.out.println(data1.toString());
+		
+		
+		// 42. Write a stream API to count the number of occurrences in the String.
+		String string = "java springboot springcode spring java";
+		List<String> list = Arrays.asList(string.split(" "));
+		Map<String, Long> collect = list.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(collect.toString());
+		
+		
+		//https://medium.com/@anil.java.story/second-highest-salary-using-java-streams-api-d8b5eb8051b5
+			
+		Map<String,Integer> map = new HashMap<>();
+        map.put("anil",1000);
+        map.put("ankit",1200);
+        map.put("bhavna",1300);
+        map.put("james",1400);
+        map.put("micael",1500);
+        map.put("tom",1600);
+        map.put("daniel",1700);
+        
+//        map.entrySet()
+//        .stream()
+//        .sorted(Comparator.comparing(entry -> -entry.getValue())) // minus make it to do in desc order
+//        .toList()
+        
+        
+        Map.Entry<String,Integer> d=map.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue())).toList().get(1);
+			System.out.println(d);
+			
+			
+			
+			Map<String,Integer> map2 = new HashMap<>();
+	        map2.put("anil",1000);
+	        map2.put("ankit",1200);
+	        map2.put("bhavna",1200);
+	        map2.put("james",1200);
+	        map2.put("micael",1000);
+	        map2.put("tom",1300);
+	        map2.put("daniel",1300);
+			
+			
+			Map.Entry<Integer, List<String>> data1=map2.entrySet().stream().collect(Collectors.groupingBy(entry-> entry.getValue(),Collectors.mapping(entry-> entry.getKey(), Collectors.toList())))
+			.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByKey()))
+			.toList()
+			.get(1);
+		
+		
+		
+	}
+	
+	
+}

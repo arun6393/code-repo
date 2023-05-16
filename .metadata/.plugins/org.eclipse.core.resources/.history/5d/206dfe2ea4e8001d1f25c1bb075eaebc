@@ -1,0 +1,12 @@
+package interview;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Exe1 {
+
+	public static void main(String args[]) {
+		Map<String,String> h=new HashMap<>();
+	}
+
+}

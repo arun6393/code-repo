@@ -1,0 +1,38 @@
+
+public class Merge2SortedArrays {
+	
+	public static void main(String args[]) {
+		
+		int a[]= {3,7,9,12,21};
+		int b[]= {6,8,15,18,27};
+		
+		
+		int op[]=new int[a.length+b.length];
+		
+		int i=0;
+		int j=0;
+		int k=0;
+		while(k<op.length) {
+			
+			if(a[i]<=b[j]) {
+				op[k]=a[i];
+				i++;
+			}else {
+				op[k]=b[j];
+				j++;
+			}
+			
+			k++;
+			
+			
+			
+		}
+		
+		for(int z=0;z<op.length;z++) {
+			System.out.println(op[z]);
+		}
+		
+		
+	}
+
+}

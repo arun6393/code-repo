@@ -1,0 +1,113 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Executor {
+
+	
+	//Executor executor=new Executor();
+	
+	public Executor() {
+		System.out.println("Constructor called");
+	}
+	
+	public void m2(Object o) {
+		
+		System.out.println("Object o");
+		
+	}
+	
+	public void m2(String s) {
+		System.out.println("String s");
+	}
+	
+	public void m2(int s) {
+		System.out.println("int s");
+	}
+	
+	public void m2(Integer s) {
+		System.out.println("Integer s");
+	}
+	
+	public void m3(StringBuilder s) {
+		System.out.println("StringBuilder");
+	}
+	
+	public void m3(StringBuffer s) {
+		System.out.println("StringBuffer");
+	}
+	
+	public void m3(String s) {
+		System.out.println("String");
+	}
+	
+	
+	public static void main(String args[]) {
+		
+		
+		Executor executor=new Executor();
+		//executor.m2(null);
+		executor.m2(Integer.valueOf(1));
+		executor.m2(1);
+	//	Child1 c1=new Parent();
+		//executor.m3(null);
+		
+		
+		Set<EmployeeePOJO> employeeSet=new TreeSet<>();
+		employeeSet.add(new EmployeeePOJO(10,"A"));
+		employeeSet.add(new EmployeeePOJO(2,"B"));
+		//employeeSet.add(new EmployeeePOJO(1,"Z"));
+		
+		
+		//employeeSet.stream().forEach(System.out::println);
+		
+		Set<Object> d=new TreeSet<>();
+		d.add("1");
+		d.add("B");
+		d.add("A");
+		
+		d.stream().forEach(System.out::println);
+		
+		try {
+			
+			call();
+			
+		}catch(Exception e) {
+			System.out.println("ddd");
+		}
+		
+		
+		
+		
+//		List<Employee> employees=Arrays.asList
+//				(
+//				new Employee("Arun", 1, BigDecimal.valueOf(1000)),
+//				new Employee("Toshika", 2, BigDecimal.ONE),
+//				new Employee("Shveta", 3, BigDecimal.TEN)
+//				);
+		
+		
+		
+		
+		//<Employee> sortedEmployees=employees.stream().sorted(Comparator.comparing(Employee::getSalary)).collect(Collectors.toList());
+		//System.out.println(sortedEmployees.toString());
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	private static void call() {
+		
+		
+		throw new ArrayIndexOutOfBoundsException("s");
+		
+	}
+	
+	
+}

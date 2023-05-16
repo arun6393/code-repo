@@ -1,0 +1,12 @@
+package learning;
+
+@FunctionalInterface
+public interface FInterface {
+
+	default void proceed() {
+		
+	}
+	
+	void accept();
+	
+}

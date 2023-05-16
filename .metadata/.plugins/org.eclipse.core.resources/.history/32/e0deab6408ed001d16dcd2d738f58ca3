@@ -1,0 +1,21 @@
+
+public interface TestInterface {
+	
+	//protected void m1();
+	
+	//strictfp void m2();
+	
+	private void m3() {
+		
+	}
+
+	
+	
+	default void m4() {
+		m3();
+	}
+	
+	
+	default void m5();
+	
+}

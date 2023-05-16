@@ -1,0 +1,8 @@
+package behavioral;
+
+public class NotificationService {
+
+	
+	void update();
+	
+}

@@ -1,0 +1,13 @@
+package learning;
+
+public class Executor {
+
+	public static void main(String args[]) {
+		FInterface fInterface=()-> System.out.println("hello");
+		
+		
+		fInterface.accept();
+		
+	}
+	
+}

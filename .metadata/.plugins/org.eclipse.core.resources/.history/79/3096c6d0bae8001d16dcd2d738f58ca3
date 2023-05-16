@@ -1,0 +1,39 @@
+package creational;
+
+import java.io.Serializable;
+
+public final class SingletonAgain implements Cloneable,Serializable{
+
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7782665495070317590L;
+
+
+	private SingletonAgain() {
+		
+	}
+	
+	
+	private static class SingletonAgainBuilder {
+		private static final SingletonAgain INSTANCE= new SingletonAgain();
+	}
+	
+	public static SingletonAgain getInstance() {
+		return SingletonAgainBuilder.INSTANCE;
+	}
+	
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return getInstance();
+	}
+	
+	
+	public SingletonAgain readResolve(){
+		return getInstance();
+	}
+	
+}

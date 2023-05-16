@@ -1,0 +1,11 @@
+package structural;
+
+public class BasePizza2 extends BasePizza{
+
+	@Override
+	public void cost() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

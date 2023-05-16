@@ -1,0 +1,9 @@
+
+public class TestInterfaceImpl implements TestInterface{
+
+	
+	public void m3() {
+		
+	}
+	
+}

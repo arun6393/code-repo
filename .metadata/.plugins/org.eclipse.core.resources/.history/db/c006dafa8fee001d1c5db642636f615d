@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class LambdaQuestions {
+
+	
+	
+	public static void main(String args[]) {
+		
+		
+		List<Integer> data =Arrays.asList(10,9,8,null,4,null,null,3);
+		
+		
+		List<Integer> data1=data.stream().sorted(Comparator.nullsLast(Comparator.naturalOrder())).collect(Collectors.toList());
+		
+		
+		System.out.println(data1.toString());
+		
+		
+		// 42. Write a stream API to count the number of occurrences in the String.
+		String string = "java springboot springcode spring java";
+		List<String> list = Arrays.asList(string.split(" "));
+		Map<String, Long> collect = list.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(collect.toString());
+		
+	}
+	
+	
+}

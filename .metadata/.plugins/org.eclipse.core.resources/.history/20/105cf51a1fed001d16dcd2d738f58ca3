@@ -1,0 +1,15 @@
+package tryCatch;
+
+public class TryCatchQuestions {
+	
+	public static void main(String args[]) {
+		
+		try {
+			
+		}finally {
+			
+		}
+		
+	}
+
+}

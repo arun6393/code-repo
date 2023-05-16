@@ -1,0 +1,10 @@
+package LRU;
+
+public class Node {
+	
+	private int key;
+	private int value;
+	private Node next;
+	private Node prev;
+
+}

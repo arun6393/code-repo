@@ -1,0 +1,9 @@
+
+
+
+public class EmployeeePOJO {
+	
+	private int id;
+	private String name;
+
+}

@@ -1,0 +1,12 @@
+package creational;
+
+public class WindowsFactory implements UIFactory{
+
+	@Override
+	public Button createButton() {
+		return new WindowsButton();
+	}
+
+	
+	
+}

@@ -1,0 +1,111 @@
+package LRU;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class LRUCache {
+
+	private final Map<Integer, Node> dataMap;
+	private final int capacity;
+	private Node head;
+	private Node tail;
+	
+	public LRUCache(int capacity) {
+		dataMap=new HashMap<>();
+		this.capacity=capacity;
+		head =new Node();
+		tail=new Node(); 
+		
+		head.setNext(tail);
+		tail.setPrev(head);
+		
+	}
+	
+	public Node get(int key) {
+		
+		
+		if(!dataMap.containsKey(key)) {
+			System.out.println("Key not present in cache");
+			return null;
+		}else {
+			
+			Node node=dataMap.get(key);
+			deleteNode(node);
+			addNodeToFront(node);
+			return node;
+		}
+	
+	}
+	
+	
+	public void add(int key , int value) {
+		
+		Node newNode=new Node(key,value);
+		
+		
+		if(dataMap.containsKey(key)) {
+			Node existingNode=dataMap.get(key);
+			deleteNode(existingNode);
+			
+		}else {
+			
+			if(dataMap.size()==this.capacity) {
+				evictLRUNode();
+			}
+			
+
+			
+		}
+		addNodeToFront(newNode);
+		dataMap.put(key, newNode);
+		
+	}
+
+	private void evictLRUNode() {
+		
+		System.out.println("Evicting data");
+		
+		Node secondLastNode=tail.getPrev();
+		secondLastNode.setNext(null);
+		tail.setPrev(null);
+		tail=secondLastNode;
+		
+		
+	}
+
+	private void deleteNode(Node existingNode) {
+		
+		System.out.println("deleting data");
+		
+		Node previous=existingNode.getPrev();
+		Node next=existingNode.getNext();
+		previous.setNext(existingNode.getNext());
+		next.setPrev(previous);
+		
+		
+	}
+
+	private void addNodeToFront(Node newNode) {
+		
+		System.out.println("Adding data to front ");
+		
+		Node currentNext=head.getNext();
+		newNode.setPrev(head);
+		head.setNext(newNode);
+		currentNext.setPrev(newNode);
+		newNode.setNext(currentNext);
+		
+		
+	}
+	
+	
+	public void display() {
+		Node current=this.head;
+		while(current!=null) {
+			System.out.println(current.getKey() + "::" + current.getValue());
+			current=current.getNext();
+		}
+	}
+	
+	
+}

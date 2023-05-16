@@ -1,0 +1,9 @@
+package creational;
+
+public class MacFactory {
+
+	
+	public static Button getButton() {
+		return new MACButton();
+	}
+}

@@ -1,0 +1,16 @@
+package behavioral;
+
+public interface ProductObservable {
+	
+	
+	void addObserver(ProductObservable po);
+	
+	void removeObserver(ProductObservable po);
+	
+	void setData(int count);
+	
+	int getData();
+	
+	void notifyObserver();
+
+}

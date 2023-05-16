@@ -1,0 +1,14 @@
+package structural;
+
+public abstract class PizzaDecorator implements BasePizza{
+
+	private BasePizza basePizza;
+	
+	
+	@Override
+	public void cost() {
+		basePizza.cost();
+	}
+
+	
+}

@@ -1,0 +1,37 @@
+
+public class ThreadSyncIssue {
+	
+	public synchronized void m1() throws InterruptedException {
+		Thread.sleep(1000);
+		m2();
+	}
+	
+	public synchronized void m2() throws InterruptedException {
+		Thread.sleep(1000);
+		m1();
+	}
+	
+	
+	public static void main(String args[]) {
+		ThreadSyncIssue issue=new ThreadSyncIssue();
+		ThreadSyncIssue issue1=new ThreadSyncIssue();
+		
+		
+		new Thread(()->{
+			try {
+				issue.m1();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}).start();
+		
+		new Thread(()->{
+			issue1.m2();
+		}).start();
+		
+		
+	}
+	
+
+}

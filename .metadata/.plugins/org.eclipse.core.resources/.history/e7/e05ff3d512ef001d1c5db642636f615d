@@ -1,0 +1,17 @@
+
+public class Print3ThreadsRunnable implements Runnable{
+
+	
+	private PrintUsing3Threads printUsing3Threads;
+	private int result;
+	
+	
+	
+	
+	@Override
+	public void run() {
+	
+		
+	}
+
+}

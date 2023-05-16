@@ -1,0 +1,19 @@
+package tryCatch;
+
+public class TryCatchQuestions {
+	
+	public static void main(String args[]) {
+	
+		TryCatchQuestions catchQuestions=new TryCatchQuestions();
+		catchQuestions.m1();
+	}
+	
+	public void m1() {
+		try {
+			
+		}finally {
+			
+		}
+	}
+
+}

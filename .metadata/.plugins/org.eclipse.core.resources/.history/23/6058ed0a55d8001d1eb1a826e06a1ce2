@@ -1,0 +1,19 @@
+
+public abstract class Parent {
+	
+	
+	public abstract void m1();
+	
+	protected abstract void m2();
+	
+	protected abstract int m3();
+	
+	protected abstract int m4(int a);
+	
+	protected abstract int m4(Integer v);
+	
+	private void m5() {
+		
+	}
+
+}

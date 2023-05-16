@@ -1,0 +1,19 @@
+
+public class FinalKeyWord {
+	
+	final static int  data=0;
+	
+	public FinalKeyWord() {
+		this.data=1;
+	}
+	
+	public static void m1() {
+		System.out.println(data);
+	}
+	
+	public static void main(String args[]) {
+		FinalKeyWord.m1();
+	}
+	
+
+}

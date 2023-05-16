@@ -1,0 +1,45 @@
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Executor {
+
+	
+	public static void main(String args[]) {
+		
+		
+		try {
+			
+		}catch(Exception e) {
+			System.out.println(e.printStackTrace());
+		}
+		
+		
+		
+		
+		List<Employee> employees=Arrays.asList
+				(
+				new Employee("Arun", 1, BigDecimal.valueOf(1000)),
+				new Employee("Toshika", 2, BigDecimal.ONE),
+				new Employee("Shveta", 3, BigDecimal.TEN)
+				);
+		
+		
+		
+		
+		List<Employee> sortedEmployees=employees.stream().sorted(Comparator.comparing(Employee::getSalary)).collect(Collectors.toList());
+		System.out.println(sortedEmployees.toString());
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+}

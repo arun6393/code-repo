@@ -1,0 +1,5 @@
+package com.DKatalis.ParkingLot.command;
+
+public interface ParkingCommand {
+
+}

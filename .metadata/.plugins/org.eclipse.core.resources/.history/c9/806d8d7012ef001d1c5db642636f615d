@@ -1,0 +1,24 @@
+
+public class PrintUsing3Threads {
+	
+	
+	private int number=1;
+	private int sequence;
+	private int noOfThreads;
+	
+	public PrintUsing3Threads(int noOfThreads,int sequence) {
+		this.sequence=sequence;
+		this.noOfThreads=noOfThreads;
+	}
+
+	
+	
+	public void print() {
+		
+		
+		
+		
+	}
+	
+	
+}

@@ -1,0 +1,8 @@
+
+public interface TestInterface {
+	
+	//protected void m1();
+	
+	//strictfp void m2();
+
+}

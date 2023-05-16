@@ -1,0 +1,14 @@
+
+public class ThreadSyncIssue {
+	
+	public synchronized void m1() {
+		m2();
+	}
+	
+	public synchronized void m2() {
+		m1();
+	}
+	
+	
+
+}

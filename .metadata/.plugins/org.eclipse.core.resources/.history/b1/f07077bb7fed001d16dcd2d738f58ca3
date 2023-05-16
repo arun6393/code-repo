@@ -1,0 +1,30 @@
+
+public class ThreadSyncIssue {
+	
+	public synchronized void m1() {
+		m2();
+	}
+	
+	public synchronized void m2() {
+		m1();
+	}
+	
+	
+	public static void main(String args[]) {
+		ThreadSyncIssue issue=new ThreadSyncIssue();
+		ThreadSyncIssue issue1=new ThreadSyncIssue();
+		
+		
+		new Thread(()->{
+			issue.m1();
+		}).start();
+		
+		new Thread(()->{
+			issue1.m2();
+		}).start();
+		
+		
+	}
+	
+
+}

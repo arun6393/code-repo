@@ -1,0 +1,26 @@
+
+public class Print3ThreadsRunnable implements Runnable{
+
+	
+	private PrintUsing3Threads printUsing3Threads;
+	private int result;
+	
+	
+	
+	
+	public Print3ThreadsRunnable(PrintUsing3Threads printUsing3Threads, int result) {
+		super();
+		this.printUsing3Threads = printUsing3Threads;
+		this.result = result;
+	}
+
+
+
+
+	@Override
+	public void run() {
+	
+		printUsing3Threads.print(result);
+	}
+
+}

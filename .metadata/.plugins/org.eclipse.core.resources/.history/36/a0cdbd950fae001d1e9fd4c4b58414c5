@@ -1,0 +1,35 @@
+
+
+public class Execute {
+	
+	public static void main(String args[]) {
+		
+	
+		Test t=new Test();
+		Runnable r=()->{
+			t.execute();
+		};
+		
+		r.run();
+		
+		Runnable r1=()->{
+			t.execute();
+		};
+		
+		r1.run();
+		
+	}
+
+}
+
+
+class Test{
+	public void execute() {
+		
+		
+		synchronized (this) {
+			System.out.println("thread is "+Thread.currentThread());	
+		}
+		
+	}
+}

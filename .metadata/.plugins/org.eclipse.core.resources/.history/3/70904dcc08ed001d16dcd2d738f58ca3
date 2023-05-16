@@ -1,0 +1,17 @@
+
+public class TestInterfaceImpl implements TestInterface{
+
+	
+	public void m3() {
+		
+	}
+	
+	
+	public void m8() {
+		TestInterface.super.m7();
+	}
+	
+	public void m7() {
+		TestInterface.m8();
+	}
+}

@@ -1,0 +1,53 @@
+package LRU;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class LRUCache {
+
+	private final Map<Integer, Node> dataMap;
+	private final int capacity;
+	private Node head;
+	private Node tail;
+	
+	public LRUCache(int capacity) {
+		dataMap=new HashMap<>();
+		this.capacity=capacity;
+		head =new Node();
+		tail=new Node();
+		
+		head.setNext(tail);
+		tail.setPrev(head);
+		
+	}
+	
+	public void add(int key , int value) {
+		
+		Node newNode=new Node(key,value);
+		
+		
+		if(dataMap.containsKey(key)) {
+			Node existingNode=dataMap.get(key);
+			dataMap.put(key, newNode);
+			deleteNode(existingNode);
+			addNodeToFront(newNode);
+		}
+		
+		
+		
+	}
+
+	private void deleteNode(Node existingNode) {
+		
+		
+	}
+
+	private void addNodeToFront(Node newNode) {
+		
+		
+		
+		
+	}
+	
+	
+}

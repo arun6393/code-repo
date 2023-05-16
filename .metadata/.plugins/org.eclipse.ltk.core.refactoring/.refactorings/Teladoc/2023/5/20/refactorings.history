@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;teladoc.Teledoc&apos; to &apos;Teladoc&apos;&#x0D;&#x0A;- Original project: &apos;Teladoc&apos;&#x0D;&#x0A;- Original element: &apos;teladoc.Teledoc&apos;&#x0D;&#x0A;- Renamed element: &apos;teladoc.Teladoc&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Teledoc&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;teladoc{Teledoc.java[Teledoc" matchStrategy="1" name="Teladoc" qualified="false" references="true" similarDeclarations="false" stamp="1684163815504" textual="false" version="1.0"/>
+</session>

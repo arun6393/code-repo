@@ -1,0 +1,9 @@
+package t1;
+
+public class Abs1 {
+	
+	protected void m1() {
+		
+	}
+
+}

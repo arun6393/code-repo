@@ -1,0 +1,11 @@
+package t2;
+
+import t1.Abs1;
+
+public class Abs3 {
+	
+	public void m6() {
+		Abs1 ab1=new Abs1();
+	}
+
+}

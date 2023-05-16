@@ -1,0 +1,10 @@
+package creational;
+
+public class WindowsFactory {
+
+	
+	public static Button getButton() {
+		return new WindowsButton();
+	}
+	
+}
